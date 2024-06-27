@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Selphishユーザガイド</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="css/docsify-accordify.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.png">
+  <script src="https://kit.fontawesome.com/2c56ab71c0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="app">Loading...</div>
+
+  <div id="scroll-to-top">
+    <i class="fa-solid fa-chevron-up"></i>
+    <span>TOP</span>
+  </div>
+
+  <script>
+    window.$docsify = {
+      /**
+       * ==============================
+       * common
+       * ==============================
+       */
+      // サイドバー上部に表示するタイトル
+      name: 'Selphishユーザガイド',
+      // git repository
+      repo: '',
+      // nameのリンク
+      nameLink: '/#/', 
+      // ページ移動時にトップから表示する
+      auto2top: true,
+      // 存在しないページ指定時に _404.md を表示する
+      notFoundPage: true,
+      // テーマカラー
+      themeColor: '#3DA9AC',
+
+      /**
+       * ==============================
+       * coverpage
+       * ==============================
+       */
+      // カバーページ読み込み
+      coverpage: true,
+
+      /**
+       * ==============================
+       * sidebar
+       * ==============================
+       */
+      // サイドバー読み込み
+      loadSidebar: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+      },
+      // 自動でサイドバーに展開するヘッダーレベル
+      subMaxLevel: 2,
+
+      /**
+       * ==============================
+       * search plugin
+       * ==============================
+       */
+      // 検索プラグイン有効化
+      search: 'auto',
+      search: {
+        /**
+         * ローカルストレージでのキャッシュ時間（ms）
+         * 
+         * [MEMO]
+         * 作業時は数秒程度に設定しないとブラウザで直ぐに確認できない
+         */
+        maxAge: 86400000,
+        /**
+         * 検索の深さ（ヘッダーレベル）
+         * 
+         * [MEMO]
+         * 各ページでh1を使用しない（h2以下を使用する）場合、
+         * depthを1にしておくと、ページ単位での検索になり、サジェストが見やすい
+         */
+        depth: 1,
+        // 検索時にサイドバーメニューを隠さない
+        hideOtherSidebarContent: false,
+        // 検索窓プレースホルダー
+        placeholder: 'キーワード検索',
+        // 検索結果0件時表示テキスト
+        noData: '該当するキーワードが見つかりません。',
+      },
+
+      /**
+       * ==============================
+       * Google Analytics 4 (GA4) plugin
+       * ==============================
+       */
+      // ID (gaには js/ga4.js によって環境に応じたIDが設定されます)
+      ga: '',
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-ga"></script>
+  <script src="js/scripts/ga4.js"></script>
+  <script src="js/plugins/docsify-accordify.js"></script>
+  <script src="js/plugins/top-scroller.js"></script>
+  <script src="js/plugins/search-highlighter.js"></script>
+</body>
+</html>
